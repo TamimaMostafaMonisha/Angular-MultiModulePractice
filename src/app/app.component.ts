@@ -4,21 +4,10 @@ import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  showRootNavbar = true;
 
-  constructor(private router: Router) {
-    this.router.events
-      .pipe(
-        filter((event: Event): event is NavigationEnd => event instanceof NavigationEnd)
-      )
-      .subscribe((event: NavigationEnd) => {
-        // Hide root navbar on student/teacher routes
-        this.showRootNavbar = !(
-          event.url.startsWith('/students') || event.url.startsWith('/teachers')
-        );
-      });
-  }
+  constructor() {}
 }

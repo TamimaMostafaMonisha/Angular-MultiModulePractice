@@ -7,17 +7,10 @@ import { StudentNavComponent } from './components/student-nav/student-nav.compon
 import { StudentBodyComponent } from './components/student-body/student-body.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: StudentsComponent,
-    children: [
-      { path: '', component: StudentNavComponent },
-      { path: 'list', component: StudentListComponent },
-      { path: 'details', component: StudentDetailsComponent },
-      { path: 'body', component: StudentBodyComponent },
-    ]
-  }
-];
+  { path: '', redirectTo: '/students/list', pathMatch: 'full' },
+  { path: 'list', component: StudentListComponent },
+  { path: 'details', component: StudentDetailsComponent },
+  { path: 'body', component: StudentBodyComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

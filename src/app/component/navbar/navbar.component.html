@@ -1,23 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-dark teacher-navbar shadow-sm bg-warning">
    <div class="container-fluid">
       <!-- Brand -->
-      <a class="navbar-brand fw-bold" routerLink="/teachers/list">Home Navbar</a>
+      <a class="navbar-brand fw-bold" routerLink="/">Root Navbar</a>
 
       <!-- Mobile toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#teacherNavbar"
-         aria-controls="teacherNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#rootNavbar"
+         aria-controls="rootNavbar" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- Menu items -->
-      <div class="collapse navbar-collapse" id="teacherNavbar">
+      <div class="collapse navbar-collapse" id="rootNavbar">
          <ul class="navbar-nav ms-auto">
 
             <!-- Home -->
             <li class="nav-item">
-               <a class="nav-link" routerLink="/" routerLinkActive="active"
-                  [routerLinkActiveOptions]="{ exact: true }">
-                  <i class="bi bi-house-door-fill"></i> Home
+               <a class="nav-link" routerLink="/home" routerLinkActive="active">
+                  Home
                </a>
             </li>
 
@@ -28,36 +27,19 @@
                </a>
             </li>
 
-            <!-- Teacher Details -->
-            <li class="nav-item">
-               <a class="nav-link" routerLink="/teachers/list" routerLinkActive="active">
-                  Teacher list
-               </a>
-            </li>
-
-                 <li class="nav-item">
-               <a class="nav-link" routerLink="/teachers/details" routerLinkActive="active">
-                  Teacher Details
-               </a>
-            </li>
-
             <!-- Students -->
             <li class="nav-item">
                <a class="nav-link" routerLink="/students" routerLinkActive="active">
                   Students
                </a>
             </li>
-                        <!-- Students -->
+
             <li class="nav-item">
-               <a class="nav-link" routerLink="/students/list" routerLinkActive="active">
-                  Students List
+               <a class="nav-link" routerLink="/about" routerLinkActive="active">
+                  About
                </a>
             </li>
-               <li class="nav-item">
-               <a class="nav-link" routerLink="/students/details" routerLinkActive="active">
-                  Students details
-               </a>
-            </li>
+
          </ul>
       </div>
    </div>

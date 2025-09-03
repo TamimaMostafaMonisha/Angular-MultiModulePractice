@@ -6,7 +6,7 @@ import { TeacherDetailsComponent } from './components/teacher-details/teacher-de
 import { TeacherNavComponent } from './components/teacher-nav/teacher-nav.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'teachers/tchList', pathMatch: 'full' },
+  { path: '', redirectTo: '/teachers/tchList', pathMatch: 'full' },
   { path: 'tchNav', component: TeacherNavComponent },
   { path: 'tchList', component: TeacherListComponent },
   { path: 'tchDet', component: TeacherDetailsComponent }];
